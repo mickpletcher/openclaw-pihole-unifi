@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/mickpletcher/openclaw-pihole-unifi/security/policy
+    about: Read the private reporting instructions before sharing sensitive details.
+  - name: Support guidance
+    url: https://github.com/mickpletcher/openclaw-pihole-unifi/blob/main/SUPPORT.md
+    about: Review project status and safe diagnostic guidance.

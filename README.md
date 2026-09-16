@@ -1,6 +1,16 @@
 # OpenClaw Pi-hole and UniFi Operations
 
+[![Repository validation](https://github.com/mickpletcher/openclaw-pihole-unifi/actions/workflows/ci.yml/badge.svg)](https://github.com/mickpletcher/openclaw-pihole-unifi/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Project status: blueprint](https://img.shields.io/badge/status-implementation%20blueprint-orange.svg)](#project-status)
+
 Build a local, privacy-first operations layer that lets OpenClaw monitor Pi-hole, generate daily DNS policy reviews, correlate active clients with UniFi, and stage proposed blocking changes safely.
+
+## Project status
+
+**Pre-release implementation blueprint.** The operational scripts and configuration files described in this guide have not yet been committed to the repository. The current repository documents the intended architecture, security boundaries, and implementation plan; it is not yet a deployable toolkit.
+
+Do not follow the installation commands until the referenced files are present in a tagged release. Contributions that help implement and test the planned components are welcome.
 
 This guide is written for a new GitHub repository. It is not tied to one network, account, IP address, email address, or computer username.
 
@@ -39,7 +49,7 @@ This guide assumes:
 - Pi-hole v6 is already running.
 - UniFi integration is optional.
 - The host can reach Pi-hole and, if used, the UniFi console.
-- The repository contains the scripts and configuration files described below.
+- The completed repository will contain the scripts and configuration files described below.
 
 The original implementation was operated on macOS. The shell scripts use POSIX `sh`. Linux paths and scheduling commands will differ where noted.
 
@@ -71,7 +81,7 @@ The Git repository stores code, templates, and public list definitions. It must 
 
 ## Repository layout
 
-Use this structure:
+The planned implementation uses this structure:
 
 ```text
 .
@@ -268,6 +278,8 @@ Pi-hole v6 API sessions use this flow:
 Every script must clear password variables after authentication and close the API session in a trap or `finally` block.
 
 ## 4. Install scripts and configuration
+
+> This section applies after the implementation files are added. See [Project status](#project-status).
 
 From the repository root:
 
@@ -1087,4 +1099,10 @@ These choices are intentional:
 
 ## License
 
-Choose a license appropriate for the new repository. MIT is a practical default for small operational tools, but the repository owner should make the final choice.
+This project is licensed under the [MIT License](LICENSE).
+
+## Contributing and support
+
+- Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing a change.
+- Use [SUPPORT.md](SUPPORT.md) for setup questions and troubleshooting guidance.
+- Report suspected security vulnerabilities according to [SECURITY.md](SECURITY.md).
