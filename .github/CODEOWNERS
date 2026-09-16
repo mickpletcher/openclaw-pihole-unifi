@@ -1,0 +1,8 @@
+# Default owner for all repository changes.
+* @mickpletcher
+
+# Explicit ownership for security-sensitive automation and policy files.
+/.github/ @mickpletcher
+/SECURITY.md @mickpletcher
+/*.sh @mickpletcher
+/config/ @mickpletcher

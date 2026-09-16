@@ -1,0 +1,56 @@
+name: Bug report
+description: Report a reproducible problem with the project
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include passwords, API keys, raw DNS queries, MAC addresses, private IP addresses, internal hostnames, site identifiers, or generated reports. Follow SECURITY.md for vulnerabilities.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Documentation
+        - Pi-hole monitoring
+        - Domain review
+        - UniFi inventory or correlation
+        - Candidate testing or list export
+        - Scheduling
+        - Email delivery
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: Explain what happened and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Sanitized reproduction steps
+      placeholder: Use example.com and placeholder hostnames or addresses.
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Version or commit
+      description: Provide a tag or commit SHA when possible.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include OS, Pi-hole version, OpenClaw version, and relevant tool versions without private network details.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I removed credentials and private network data.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true
