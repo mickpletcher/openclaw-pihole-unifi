@@ -26,6 +26,8 @@ Use short, descriptive branch names:
 
 Write imperative commit subjects and keep unrelated changes in separate commits.
 
+Use annotated semantic-version tags in the form `vMAJOR.MINOR.PATCH` for releases, for example `v0.1.0`. Do not create a release tag until the referenced implementation is present and the release commit passes validation.
+
 ## Pull requests
 
 1. Fork or branch from `main`.
