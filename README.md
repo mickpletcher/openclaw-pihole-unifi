@@ -10,6 +10,12 @@ Build a local, privacy-first operations layer that lets OpenClaw monitor Pi-hole
 
 **Pre-release implementation blueprint.** The operational scripts and configuration files described in this guide have not yet been committed to the repository. The current repository documents the intended architecture, security boundaries, and implementation plan; it is not yet a deployable toolkit.
 
+- Standard version: 2.2
+- Project tier: Tier 2
+- Lifecycle mode: Greenfield
+
+For current repository health, see [ASSESSMENT.md](ASSESSMENT.md).
+
 Do not follow the installation commands until the referenced files are present in a tagged release. Contributions that help implement and test the planned components are welcome.
 
 This guide is written for a new GitHub repository. It is not tied to one network, account, IP address, email address, or computer username.
@@ -998,6 +1004,8 @@ Use the Git for Windows shell directly:
 
 ## 21. Validation checklist
 
+The authoritative repository validation procedure is in [VALIDATION.md](VALIDATION.md). The checklist below describes the planned runtime validation after implementation files exist.
+
 The base installation is complete only when:
 
 - [ ] No personal value or credential is committed.
@@ -1096,6 +1104,10 @@ These choices are intentional:
 - Exact allows are migrated only after maintained-list coverage is verified.
 - Operational interruptions are scheduled around user availability.
 - Success requires state verification, not only a successful command.
+
+## Documentation
+
+The [Authority Mapping](PROJECT-STANDARD.md#authority-mapping) identifies the single authoritative source for each documentation responsibility. Known defects are tracked in [ISSUES.md](ISSUES.md), and implementation compromises are tracked in [TECH-DEBT.md](TECH-DEBT.md).
 
 ## License
 
